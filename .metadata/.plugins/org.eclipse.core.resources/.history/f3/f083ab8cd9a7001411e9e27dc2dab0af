@@ -22,7 +22,7 @@ public class Craft extends Entity implements KeyListener{
 	
 	public Craft(int x, int y, int hp){
 		super(x, y, hp);
-		ImageIcon temp = new ImageIcon("res/img/craft.png");
+		ImageIcon temp = new ImageIcon("res/test2D_res/img/craft.png");
 		setEntityImage(temp.getImage());
 		missles = new ArrayList<Missle>();
 		keyPressedList = new boolean[5];

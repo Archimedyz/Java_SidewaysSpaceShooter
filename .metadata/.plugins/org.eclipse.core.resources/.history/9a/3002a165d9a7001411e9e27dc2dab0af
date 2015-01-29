@@ -17,9 +17,9 @@ public class Creep extends Entity implements GameConstants{
 	public Creep(int x, int y, int hp, String imagename){
 		super(x, y, hp);
 		creepState = 0;
-		ImageIcon temp = new ImageIcon("res/img/"+ imagename +".png");
+		ImageIcon temp = new ImageIcon("res/test2D_res/img/"+ imagename +".png");
 		setEntityImage(temp.getImage());
-		temp = new ImageIcon("res/img/" + imagename + "_hit.png");
+		temp = new ImageIcon("res/test2D_res/img/" + imagename + "_hit.png");
 		hitImage = temp.getImage();
 	}
 	

@@ -18,7 +18,7 @@ public interface GameConstants {
 	String MOVING_CREEP_IMAGENAME = "m_creep";
 	
 	// path file names
-	String CREEP_PATH_1 = "res/info/creep_paths/creep_path_1.txt";
-	String ERIC_PATH = "res/info/creep_paths/eric_path.txt";
-	String FONT_PATH = "res/font/emulogic.ttf";
+	String CREEP_PATH_1 = "res/test2D_res/info/creep_paths/creep_path_1.txt";
+	String ERIC_PATH = "res/test2D_res/info/creep_paths/eric_path.txt";
+	String FONT_PATH = "res/test2D_res/font/emulogic.ttf";
 }
