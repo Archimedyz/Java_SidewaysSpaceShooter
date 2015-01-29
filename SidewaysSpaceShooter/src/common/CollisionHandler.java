@@ -1,0 +1,36 @@
+package common;
+
+import java.awt.Rectangle;
+import java.util.ArrayList;
+
+import weapon.Weapon;
+import enitity.Entity;
+
+public class CollisionHandler {
+	private ArrayList EntityObjects, weaponObjects;
+	public CollisionHandler(){
+		EntityObjects = new ArrayList();
+		weaponObjects = new ArrayList();
+	}
+	
+	public void addCollision(ArrayList<? extends Entity> EntityList, ArrayList<? extends Weapon> weaponList){
+		EntityObjects.add(EntityList);
+		weaponObjects.add(weaponList);
+	}
+	
+	public void collisionCheck(){
+		for(int i = 0; i < EntityObjects.size(); i++){
+			ArrayList<Entity> entityList1 = (ArrayList<Entity>)EntityObjects.get(i);
+			ArrayList<Weapon> entityList2 = (ArrayList<Weapon>)weaponObjects.get(i);
+			for(int j = 0; j < entityList1.size(); j++){
+				Rectangle hitBox1 = entityList1.get(j).getHitBox();
+				for(int k = 0; k < entityList2.size(); k++){
+					Rectangle hitBox2 = entityList2.get(k).getHitBox();					
+					if(hitBox1.intersects(hitBox2)){
+						entityList1.get(j).doDamage(entityList2.get(k));
+					}
+				}
+			}
+		}
+	}
+}
